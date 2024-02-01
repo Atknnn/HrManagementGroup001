@@ -1,0 +1,22 @@
+buildscript {
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${versions.springBoot}")
+    }
+}
+dependencies {
+    implementation 'org.apache.httpcomponents:httpclient:4.5.14'
+    implementation 'org.apache.httpcomponents:httpmime:4.5.14'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0'
+    implementation libs.springBootDataJpa
+    implementation libs.swaggerui
+    implementation libs.validation
+    implementation libs.jwt
+    implementation libs.springBootSecurity
+    implementation libs.springBootAmqp
+    implementation libs.springCloudOpenFeign
+    implementation libs.postgresql
+    implementation libs.springCloudConfigClient
+}

@@ -1,0 +1,38 @@
+server:
+  port: 9090
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: root
+    url: jdbc:postgresql://localhost:5432/PersonelDB
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  security:
+    user:
+      name: group
+      password: 123456
+
+rabbitmq:
+  exchange-auth: auth-exchange
+  register-key: register-key
+  queue-register: register-queue
+  register-mail-key: register-mail-key
+  register-mail-queue: register-mail-queue
+
+jwt:
+  secretkey: ${java11secretkey}
+  issuer: ${java11issuer}
+  audience: ${java11audience}2
+
+  servlet:
+    multipart:
+      max-file-size: 10485760
+      max-request-size: 20485760
+
+imgur:
+  client:
+    id: 123
